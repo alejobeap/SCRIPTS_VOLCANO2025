@@ -1,0 +1,4 @@
+### Instrucciones para Jasmin pra volcanes
+
+
+volq_process.sh -n Fernandina -C 0.15 -M 3
