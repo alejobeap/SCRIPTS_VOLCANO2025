@@ -1,4 +1,52 @@
 ### Instrucciones para Jasmin pra volcanes
 
+update_frame.sh
+
+#!/bin/bash
+
+# Define the start date
+START_DATE="2024-12-01"
+
+# Dynamically set the final date to today's date
+FINAL_DATE=$(date +%Y-%m-%d)
+
+# Check if list.txt exists
+if [[ ! -f list.txt ]]; then
+  echo "Error: list.txt file not found!"
+  exit 1
+fi
+
+# Loop through each frame ID in the file
+while IFS= read -r FRAME_ID; do
+  echo "Processing frame: $FRAME_ID"
+  licsar_make_frame.sh -f -T "$FRAME_ID" 1 1 "$START_DATE" "$FINAL_DATE"
+done < list.txt
+
+
 
 volq_process.sh -n Fernandina -C 0.15 -M 3
+
+Lista Frames Volcanes Chiles
+Norte
+149A_10834_131313
+149A_11032_131313
+149A_11230_131313
+149A_11428_131313
+149A_11626_131313
+076A_11050_131113
+076A_11251_131313
+076A_10855_131313
+047A_11383_121313
+047A_11581_141313
+047A_11782_131313
+054D_10879_131313
+156D_10829_131313
+156D_11028_131313
+156D_11226_131313
+156D_11424_131313
+156D_11622_131313
+083D_11056_131313
+083D_11254_131313
+083D_11452_131313
+083D_11651_131313
+156D_11820_131313
