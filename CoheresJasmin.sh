@@ -25,7 +25,6 @@ dateM=$folder_name
 
 
 ln -s $topdir/geo.m/$dateM* .
-dateM="geo.m/20190324.hgt"
 
 widthmli=`grep range_sample $date1/$date1.mli.par | awk '{print $2}'`
 
