@@ -5,10 +5,27 @@ date2="$2"
 lksrng=20 
 lksazi=4
 
+set topdir = `pwd`
+
+
+####
+
+# Get the current directory
+topdir=$(pwd)
+
+# Extract the last folder name
+folder_name=$(basename "$topdir")
+
+echo "Current folder name: $folder_name"
+
 #Multilook
 multi_look $date1/$date1.rslc $date1/$date1.rslc.par $date1/$date1.mli $date1/$date1.mli.par $lksrng $lksazi
 
-#dateM=
+dateM=$folder_name
+
+
+ln -s $topdir/geo.m/$dateM* .
+dateM="geo.m/20190324.hgt"
 
 widthmli=`grep range_sample $date1/$date1.mli.par | awk '{print $2}'`
 
