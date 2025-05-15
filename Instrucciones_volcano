@@ -25,6 +25,10 @@ done < list.txt
 #########################
 import volcdb
 
+volcid=int(volcdb.find_volcano_by_name('V').volc_id)
+print(volcdb.get_volclip_vids(volcid))
+
+#############
 
 
 volq_process.sh -n Fernandina -C 0.15 -M 3
