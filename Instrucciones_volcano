@@ -22,6 +22,9 @@ while IFS= read -r FRAME_ID; do
   licsar_make_frame.sh -f -T "$FRAME_ID" 1 1 "$START_DATE" "$FINAL_DATE"
 done < list.txt
 
+#########################
+import volcdb
+
 
 
 volq_process.sh -n Fernandina -C 0.15 -M 3
