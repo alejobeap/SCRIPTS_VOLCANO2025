@@ -1,0 +1,31 @@
+ssh -XY eepabe@foe-linux-02
+
+eval $(ssh-agent -s)
+
+ssh-add ~/.ssh/id_rsa_jasmin
+
+ssh -X -Y -A alejobea@login-01.jasmin.ac.uk
+
+
+for file nano ~/.bashrc
+
+alias sq='squeue --user=alejobea --states=all -o "%.18i %.9P %.45j %.12T %.10M %.5m %.9l %.6D %R"'
+alias mio='cd /work/scratch-pw3/licsar/alejobea/batchdir/LiCSBAS/'
+alias m='module load licsar_framebatch_testing/testing'
+alias req='nla_check_status.sh'
+alias mam='source /gws/smf/j04/nceo_geohazards/software/mambalics/load_mambalics.r'
+alias mio2='cd /work/scratch-pw3/licsar/alejobea/batchdir/'
+alias dvacio='find . -type d -empty -delete'
+
+# User specific aliases and functions
+#export BATCH_CACHE_DIR=/work/scratch-pw3/alejobea/batchcachedir
+#. /gws/smf/j04/nceo_geohazards/software/mambalics/load_mambalics.bash
+module use "/gws/smf/j04/nceo_geohazards/software/Modules/"
+export BATCH_CACHE_DIR=/work/scratch-pw3/licsar/alejobea/batchdir
+
+
+function copiar() {
+    echo "Copying file: $1 to /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro"
+    cp "$1" /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro
+}
+
