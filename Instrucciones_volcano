@@ -80,6 +80,10 @@ Sur
 010D_13416_131313
 010D_13610_131313
 112D_13153_131313
+
+## crear IF based in list
+subset_mk_ifgs.sh -P /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/volc/2753/149A /work/scratch-pw3/licsar/alejobea/batchdir/SOCOMPA/filtered_date_pairs.txt
+
 010D_12637_131313
 010D_12833_131313
 
