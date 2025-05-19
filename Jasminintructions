@@ -7,7 +7,7 @@ ssh-add ~/.ssh/id_rsa_jasmin
 ssh -X -Y -A alejobea@login-01.jasmin.ac.uk
 
 
-for file nano ~/.bashrc
+##############for file nano ~/.bashrc
 
 alias sq='squeue --user=alejobea --states=all -o "%.18i %.9P %.45j %.12T %.10M %.5m %.9l %.6D %R"'
 alias mio='cd /work/scratch-pw3/licsar/alejobea/batchdir/LiCSBAS/'
@@ -29,3 +29,14 @@ function copiar() {
     cp "$1" /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro
 }
 
+##########
+
+ssh -X -Y -A alejobea@sci-vm-02.jasmin.ac.uk 
+
+#############
+
+module load licsar_framebatch_testing/testing
+
+####################
+
+source /gws/smf/j04/nceo_geohazards/software/mambalics/load_mambalics.rc
