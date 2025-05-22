@@ -90,3 +90,20 @@ licsar2licsbas.sh -M 1 -u -d -T -n 4 -t 0.15
 010D_12833_131313
 
 
+
+#######################Pasos 
+
+1. Identificar el ID con el codigo 
+python ../VER_Nombre_volcan.py Socompa
+2753
+
+2. COPIAR los archivos
+mkdir 156D ; scp -r /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/volc/2753/156D/RSLC/ 156D/
+scp -r /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/volc/2753/156D/SLC/ 156D/
+mkdir 156D/geo
+scp -r /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/volc/2753/156D/geo.m/ 156D/geo/
+
+and the all *sh and *py files
+
+
+
