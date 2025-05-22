@@ -24,6 +24,38 @@ module use "/gws/smf/j04/nceo_geohazards/software/Modules/"
 export BATCH_CACHE_DIR=/work/scratch-pw3/licsar/alejobea/batchdir
 
 
+
+
+
+############################# Nuevo
+
+###dynamic $BATCH_CACHE_DIR
+if [ -z "$BATCH_CACHE_DIR" ]; then
+   export BATCH_CACHE_DIR=/work/scratch-pw3/licsar/alejobea/batchdir
+fi
+
+function copiar() {
+    echo "Copying file: $1 to /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro"
+    cp "$1" /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro
+}
+
+
+batch2() {
+    export BATCH_CACHE_DIR=/work/scratch-pw2/licsar/alejobea/batchdir
+    export LiCSAR_temp=/work/scratch-pw2/licsar/alejobea/batchdir/LiCSAR_temp/
+}
+
+batch3() {
+    export BATCH_CACHE_DIR=/work/scratch-pw3/licsar/mnergiz/batchdir
+    export LiCSAR_temp=/work/scratch-pw3/licsar/mnergiz/batchdir/LiCSAR_temp/
+}
+
+batch_nopw() {
+    export BATCH_CACHE_DIR=/work/scratch-nopw2/licsar/alejobea/batchdir
+    export LiCSAR_temp=/work/scratch-nopw2/licsar/alejobea/batchdir/LiCSAR_temp/
+}
+
+
 function copiar() {
     echo "Copying file: $1 to /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro"
     cp "$1" /gws/nopw/j04/nceo_geohazards_vol1/public/LiCSAR_products/../shared/Pedro
