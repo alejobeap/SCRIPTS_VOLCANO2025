@@ -84,7 +84,7 @@ Sur
 ## crear IF based in list
 subset_mk_ifgs.sh -P /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/volc/2753/149A /work/scratch-pw3/licsar/alejobea/batchdir/SOCOMPA/filtered_date_pairs.txt
 framebatch_gapfill.sh -l -n 5 -P -i /work/scratch-pw3/licsar/alejobea/batchdir/SOCOMPA/filtered_IFS_average_cc_value.txt -o 5 480 7 2
-
+licsar2licsbas.sh -M 1 -u -d -T -n 4 -t 0.15
 
 010D_12637_131313
 010D_12833_131313
