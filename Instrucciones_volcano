@@ -106,4 +106,6 @@ scp -r /gws/nopw/j04/nceo_geohazards_vol1/projects/LiCS/proc/current/subsets/vol
 and the all *sh and *py files
 
 
+create_preview_unwrapped GEOC/20190416_20191106/20190416_20191106.geo.unw.tif `cat sourceframe`
+
 
