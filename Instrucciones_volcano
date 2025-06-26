@@ -3,6 +3,12 @@
 parent_dir=$(basename "$(dirname "$(pwd)")")
 current_dir=$(basename "$(pwd)")
 
+contar() {
+find GEOC -type d | wc -l
+}
+
+contar numero de carpetas
+
 
 update_frame.sh
 
